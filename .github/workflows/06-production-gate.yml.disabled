@@ -1,0 +1,25 @@
+name: 06 - Production Gate Demo
+
+on:
+  workflow_dispatch:
+    inputs:
+      image_tag:
+        description: Image tag to deploy
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: production
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simulate deployment
+        run: echo "Deploying image tag ${{ inputs.image_tag }} to production"

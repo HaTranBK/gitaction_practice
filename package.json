@@ -1,0 +1,15 @@
+{
+  "name": "github-actions-practice-pack",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test",
+    "lint": "node --check src/index.js && node --check src/sum.js && node --check test/sum.test.js",
+    "build": "node scripts/build.js"
+  }
+}

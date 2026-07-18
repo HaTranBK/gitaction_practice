@@ -1,0 +1,20 @@
+name: 01 - Hello Actions
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print workflow information
+        run: |
+          echo "Repository: $GITHUB_REPOSITORY"
+          echo "Commit: $GITHUB_SHA"
+          echo "Branch/ref: $GITHUB_REF"
+          echo "Actor: $GITHUB_ACTOR"
