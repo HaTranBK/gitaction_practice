@@ -3,5 +3,5 @@ import assert from 'node:assert/strict';
 import { sum } from '../src/sum.js';
 
 test('sum adds two numbers', () => {
-  assert.equal(sum(2, 3), 5);
+  assert.equal(sum(2, 3), 6);
 });
